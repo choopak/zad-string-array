@@ -11,4 +11,12 @@ class ZadanieSpec extends ObjectBehavior
     {
         $this->shouldHaveType('choopak\Tools\Zadanie');
     }
+        function it_should_have_setter_and_getter()
+    {
+        $this->setStr('rafal rafal durzynski durzynski')->getStr()->shouldReturn('rafal rafal durzynski durzynski');
+    }
+    function it_should_generate_wynik()
+    {
+        $this->setStr('rafal rafal durzynski durzynski')->wynik()->shouldReturn('rafal - 2; durzynski - 2; ');
+    }
 }
